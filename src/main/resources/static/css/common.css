@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/** {*/
+/*	margin: 0;*/
+/*	padding: 0;*/
+/*	list-style-type: none;*/
+/*}*/
+
+:root {
+	--color-transparent: transparent;
+    --color-current: currentColor;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-red: #dc2626;
+    --color-gray-0: #fff;
+    --color-gray-1: #f5f6ff;
+    --color-gray-2: #efeef2;
+    --color-gray-3: #979797;
+    --color-gray-4: #060119;
+    --color-blue-0: #f5f6ff;
+    --color-blue-1: #c7c8f6;
+    --color-blue-2: #8f90ec;
+    --color-blue-3: #4546e0;
+    --color-purple-0: #f9f6fd;
+    --color-purple-1: #dcc9fa;
+    --color-purple-2: #b993f5;
+    --color-purple-3: #8b4bef;
+    --color-purple-4: #753fcb;
+    --color-purpleDark-0: #c6c1db;
+    --color-purpleDark-1: #aca2cb;
+    --color-purpleDark-2: #432277;
+    --color-purpleDark-3: #2a1567;
+    --color-purpleDark-4: #220b5c;
+    --color-purpleDark-5: #17044a;
+    --color-magenta-0: #fef;
+    --color-magenta-1: #f3cdf2;
+    --color-magenta-2: #e69be5;
+    --color-magenta-3: #d658d3;
+    --color-magenta-4: #b52eb1;
+    --color-pink-0: #ff4876;
+    --color-pink-1: #de2864;
+    --color-pink-2: #c22357;
+    --color-orange-0: #fff2e1;
+    --color-orange-1: #ffddb3;
+    --color-orange-2: #ffba66;
+    --color-orange-3: #ff8c00;
+    --color-error-0: #f99;
+    --color-error-1: #e62e00;
+    --color-error-2: #bf2600;
+    --color-error-3: #841a00;
+    --color-valid-0: #fafdfc;
+    --color-valid-1: #ecf3ee;
+    --color-valid-2: #36b370;
+    --color-valid-3: #008842;
+    --color-valid-4: #1a6343;
+    --color-warning-0: #fffef9;
+    --color-warning-1: #fffae6;
+    --color-warning-2: #ffab00;
+    --color-warning-3: #b26100;
+    --color-warning-4: #774100;
+    --color-information-0: #fffef9;
+    --color-information-1: #e6fcff;
+    --color-information-2: #00b8d9;
+    --color-information-3: #008da6;
+    --color-information-4: #005b6b;
+    --color-login: #3C74B4;
+    --bg-color-loginform: rgba(255,255,255,0.1);
+    --menu_shadow: rgba(57,76,96,.15);
+}
+
+:root {
+	--wp--preset--font-size--normal: 16px;
+	--wp--preset--font-size--huge: 42px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.buttonwrap .back_before input:hover {
+	background-color: #688099;
+}
+
+.buttonwrap .submit input:hover {
+	opacity: 0.8;
+}
+
+.buttonwrap .back_before input {
+	padding: 10px 50px;
+	background-color: lightslategray;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	border: none;
+	margin: 0 5px;
+}

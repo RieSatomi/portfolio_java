@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<title>header</title>
+</head>
+<body>	
+<header class="menu">
+	<section class="menu_container">
+    	<div class="menu_con">
+			<div class="logo_icon"><a th:href="@{login}"><img src="/images/logo.png" style="width: 80px;"></a></div>
+        <!-- ここにヘッダーの内容を記述 -->
+        <!-- ここにドロップダウンメニューの内容を記述 -->
+        	<div class="menu_items">
+				<div class="profile"><a th:href="@{/profile}">プロフィール</a></div>
+				
+            	<ul class="header-dropmenu">
+               		<li><a href="" class="header_img"><img src="/images/profile_photo.jpg" style="width: 35px; height: auto; border-radius: 50%;" alt="profile_photo"></a>
+                		<ul class="submenu" id="menu">
+                    		<li><a th:href="@{/users}">ユーザー情報</a></li>
+                    		<li><a th:href="@{/logout}">ログアウト</a></li>
+                    		<li><a th:href="@{/remove}" style="color: red;">退会する</a></li>
+                		</ul>
+                	</li>
+            	</ul>
+    	</div>
+    	</div>
+    </section>
+</header>
+
+</body>
+</html>

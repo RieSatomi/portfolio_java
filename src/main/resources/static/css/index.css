@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+
+body {
+	background-color: var(--color-gray-1);
+	background-image: url('../images/login_bg.png');
+	background-size: cover;
+}
+
+.login_container {
+  	width: 100%; /* 横幅を100%に */
+  	text-align: center; /* 中央揃えのためのテキスト配置 */
+  	transform: translateY(30%); /* 要素の高さの50%分上に移動 */
+}
+
+.login_container h1 {
+	color: var(--color-white);
+}
+
+.login_input {
+  	border: 1px solid var(--color-white);
+  	width: 30%;
+  	margin: 0 auto;
+  	padding: 30px 0;
+  	border-radius: 10px;
+  	background-color: rgba(255,255,255,0.15);
+}
+
+.login_input p input {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+}
+
+.login_input p.submit input.submit_btn {
+    width: 255px;
+    height: 36px;
+    color: var(--color-white);
+    margin: 16px 0 0 0;
+    cursor: pointer;
+}
+
+.login_new {
+	margin: 50px;
+	color: var(--color-white);
+}
+
+.login_new span.mataha {
+	padding: 0 20px;
+}
+
+.login_new span a {
+	color: var(--color-white);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.login_new span a:hover {
+	color: var(--color-information-1);
+}

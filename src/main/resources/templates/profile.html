@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/profile.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROFILE</title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<section class="profile_container">
+		<div class="profile_top">
+			<h1>PROFILE</h1>
+		</div>
+		<div class="profile_wrapper">
+			<div class="pro_cons">
+				<div class="pro_con1">
+					<img src="/images/profile_photo.jpg" style="width: 20%; height: auto; border-radius: 50%;" alt="profile_photo">
+				</div>
+				<div class="pro_con2" style="padding:20px 0;">
+					<span>こんにちは里見里英と申します。</span>
+				</div>
+				<div class="pro_con3">
+					<p>　石川県金沢市出身。立命館大学生命科学部卒。
+					Webデザイナーとして、LP/コーポレートサイトのデザインとコーディング、またWebアプリケーション、モバイルアプリケーションのデザインを約一年半担当しました。
+					「デザインには必ず理由がある。」を念頭に置き、クライアントさんのご要望を聞きながら、常により良いデザイン設計ができるように奮闘して参りました。<br>
+					その後求職者支援訓練の「Python/Java＋Springフレームワークコース」を受講し、実際にプログラムを書いて動かすこと日々を過ごしました。
+					デザイナーとしての知識だけでなくプログラムをかけて分かるデザイナーとして今後は、効率的なUI/UXを設計しアプリケーション制作に携わっていきたいと考えております。</p>
+					<p>　特に得意とする領域は、既存のものをより良くするリニューアルなどのUI/UX。また自身のYouTube制作の経験から、動画マーケティングなどの分析も得意です。<br>
+					（現在個人YouTubeチャンネルの登録者数は7,000人超。）</p>
+				</div>
+				<div class="pro_con4">
+					<p>Skills<br>HTML・CSS・JavaScript・Photoshop・Illustrator・Figma・Java・Python</p>
+				</div>
+<!--				<div class="pro_con5">-->
+<!--					<p>Qualification<br>-->
+<!--					ITパスポート</p>-->
+<!--				</div>-->
+			</div>
+		</div>
+		<div class="back"><a th:href="@{/login}">戻る</a></div>
+	</section>
+</body>
+</html>

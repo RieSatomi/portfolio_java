@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/index.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<title>ログイン</title>
+</head>
+<body>
+	<section class="login_container">
+		<header class="login_header">
+			<h1>PORTFOLIO</h1>
+		</header>
+		<div class="login_wrapper">
+			<div class="login_input">
+			<form th:action="@{/login}" method="post">
+				<p class="userID"><input type="text" name="id" placeholder=" UserID" required></p>
+				<p class="password"><input type="password" name="password" placeholder=" * * * * * * *" required></p>
+				<p class="submit"><input type="submit" value="LOGIN" class="submit_btn" style="background-color: #3C74B4; border-color: #3C74B4; "></p>
+			</form>
+			</div>
+			<div class="login_new">
+				<p><span>–––––––––––––––––––</span><span class="mataha">または</span><span>–––––––––––––––––––</span></p>
+				<span class="new_reg">アカウントをお持ちでない場合 <a th:href="@{/register}">登録はこちら</a></span>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

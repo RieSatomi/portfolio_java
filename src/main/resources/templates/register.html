@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/register.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新規登録</title>
+</head>
+<body>
+	<section class="register_container">
+		<header class="register_header">
+			<h1>REGISTER</h1>
+		</header>
+		<div class="register_wrapper">
+			<div class="register_input">
+			<form th:action="@{/show}" method="post" th:object="${user}">
+				<p class="rg_name"><input type="text" th:field="*{name}" value placeholder=" Username" required></p>
+				<p class="rg_age"><input type="number" th:field="*{age}" min="1" placeholder=" Age" required></p>
+				<p class="rg_mail"><input type="email" size="30" th:field="*{mail}" placeholder=" Mail"></p>
+				<p class="rg_userID"><input type="text" minlength="4" th:field="*{id}" id="userIdInput" placeholder=" UserID" required></p>
+				<p class="rg_password"><input type="password" minlength="4" th:field="*{password}" placeholder=" Password" required></p>
+				<p class="rg_submit"><input type="submit" value="登録する" class="submit_btn"></p>
+			
+	<!--入力値エラー表示の処理-->
+			<ul th:if="${#fields.hasErrors('*')}">
+				<li th:each="err:${#fields.errors('*')}" th:text="${err}"></li>
+			</ul>
+			</form> 
+			</div>
+		</div>
+<!--	エラー処理はフォームの中に記述-->
+		<div class="register_back">
+			<a th:href="@{/show}">ログイン画面へ戻る</a>
+		</div>
+	</section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var ageInput = document.querySelector('.rg_age input[type="number"]');
+        var userIdInput = document.querySelector('.rg_userID input[type="text"]');
+        ageInput.value = ''; // 空の値を設定することで初期値を0から変更
+        userIdInput.value = ''; // 空の値を設定することで初期値を0から変更
+    });
+</script>
+</html>

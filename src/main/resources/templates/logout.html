@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/profile.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ログアウト画面</title>
+</head>
+<body>
+	<section class="profile_container logout_wrapper">
+		<div class="profile_top">
+			<h1>LOGOUT</h1>
+		</div>
+		<div class="profile_wrapper">
+				<p>[[${user.name}]]さん</p>
+				<p>ログアウトしました。</p>
+		</div>
+		<div class="back"><a th:href="@{/show}">ログインページへ</a></div>
+	</section>
+</body>
+</html>

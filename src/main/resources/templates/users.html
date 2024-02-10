@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/profile.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/users.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ユーザー情報</title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<section class="profile_container">
+		<div class="profile_top">
+			<h1>USERS</h1>
+		</div>
+		<div class="profile_wrapper users_wrapper">
+			<div class="pro_cons">
+				<p>ユーザーID：[[${user.id}]]</p>
+				<p>パスワード：<span>セキュリティ上表示していません</span></p>
+				<p>メールアドレス：[[${user.mail}]]</p>
+				<p>名　前：[[${user.name}]]</p>
+				<p>年　齢：[[${user.age}]]</p>
+			</div>
+			</div>
+		<div class="back"><a th:href="@{/login}">戻る</a></div>
+	</section>
+</body>
+</html>

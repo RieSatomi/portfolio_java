@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/profile.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/fileUp.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<title>File Upload</title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<section class="profile_container">
+		<div class="profile_top">
+			<h1>UPLOAD PORTFOLIO</h1>
+		</div>
+		<div class="profile_wrapper">
+			<div class="file_con">
+				<form th:action="@{/fileUpRegist}" enctype="multipart/form-data" method="POST">
+        		<div class="topics">
+            		<p class="lavel"><label>タイトル</label></p>
+            		<p><input type="text" name="title" style="width: 600px; height: 25px;"></p>
+        		</div>
+<!--ファイル1を追加ここから	-->
+        		<div class="topics">
+            		<p class="lavel"><label>画像1</label></p>
+            		<p><input type="file" name="file" / style="border: none;"></p>
+        		</div>
+        		<div:block th:if="${#lists.isEmpty(contents)}">
+           			<p>登録されているファイルはありません</p>
+        		</div:block>
+        		<div:block  th:if="!${#lists.isEmpty(contents)}">
+            		<span th:each="unit : ${contents}"></span>
+       			</div:block>
+<!--ファイル1を追加ここまで		-->
+			
+			
+<!--ここにファイル２を追加-->
+				<div class="topics">
+            		<p class="lavel"><label>画像2</label></p>
+           			<p><input type="file" name="file_2" / style="border: none;"></p>
+        		</div>
+        		<div:block th:if="${#lists.isEmpty(contents)}">
+            		<p>登録されているファイルはありません</p>
+        		</div:block>
+        		<div:block  th:if="!${#lists.isEmpty(contents)}">
+            		<span th:each="file_2 : ${contents}"></span>
+       			</div:block>
+<!--  ファイル２追加ここまで-->
+        		<div class="topics">
+            		<p class="lavel"><label>説明文1:</label></p>
+            		<p><textarea type="text" name="description" style="width: 600px; height: 200px;" placeholder="※1000文字以内で入力してください"></textarea><br><span class="attention">※1000文字以内</span></p>
+        		</div>
+        		<div class="topics">
+            		<p class="lavel"><label>説明文2:</label></p>
+             		<p><textarea type="text" name="description2" style="width: 600px; height: 200px;" placeholder="※1000文字以内で入力してください"></textarea><br><span class="attention">※1000文字以内</span></p>
+        		</div>
+    		</div>
+		</div>
+    	<div class="buttonwrap">
+        	<div class="back_before"><a th:href="@{/login}"><input type="button" value="戻る"></a></div>
+        	<div class="submit"><input type="submit" value="登録"></div>
+    	</div>
+    </section>
+</form>
+</body>
+</html>

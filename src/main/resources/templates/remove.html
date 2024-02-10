@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/profile.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/users.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/remove.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>退会画面</title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<section class="profile_container">
+		<div class="profile_top">
+			<h1>REMOVE USER</h1>
+		</div>
+		<div class="profile_wrapper users_wrapper">
+		<div class="pro_cons">
+		<h3>以下の内容を削除しますか？</h3>
+			<p>ユーザーID：[[${user.id}]]</p>
+			<p>パスワード：[[${user.password}]]</p>
+			<p>メールアドレス：[[${user.mail}]]</p>
+			<p>名　前：[[${user.name}]]</p>
+			<p>年　齢：[[${user.age}]]</p>
+		</div>
+		</div>
+	<div class="buttonwrap">
+        	<div class="back_before_re"><a th:href="@{/login}"><input type="button" value="戻る"></a></div>
+        	<div class="remove"><a th:href="@{/removeOK}">退会する</a></div>
+    	</div>
+	</section>
+</body>
+</html>

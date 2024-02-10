@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/profile.css}" rel="stylesheet" type="text/css" />
+	<link th:href="@{/css/loginOK.css}" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toppage</title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<div class="login_user">[[${user.name}]]さんログイン中</div>
+	<section class="profile_container" style="transform: translateY(calc(80px - 44px));">
+		<div class="profile_top">
+			<h1>TOPPAGE</h1>
+		</div>
+		<div class="profile_wrapper contents_wrapper">
+			<div class="fileUp">
+				<p><a th:href="@{/fileUp}">+ 作品追加</a></p>
+  			</div>
+			<div class="file_con">
+<!--				<div>作品の一覧</div>-->
+				<div th:each="image, stat: ${base64Images}" class="con_each">
+					<a th:href="@{/contents(id=${files[stat.index].contents_id})}">
+						<img th:src="'data:image/png;base64,' + ${image}" alt="Image">
+					</a>
+					<!--
+					<span th:text="${stat.index}"></span>  実験：繰り返しの連番を表示 
+					<span th:text="${files[0].userId}"></span> 実験：filesの0番地を強制的に表示 
+					<span th:text="${files[stat.index].contents_id}"></span>  応用：連番を利用して、画像リストと同じ番地のfilesの要素を表示 -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+</body>
+
+<script>
+    const toggle = document.getElementById('toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('change', function() {
+        if (toggle.checked) {
+            menu.style.display = 'block'; // チェックされたら表示
+        } else {
+            menu.style.display = 'none'; // チェックが外れたら非表示
+        }
+    });
+</script>
+
+</html>

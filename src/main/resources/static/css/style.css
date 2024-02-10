@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+* {
+	margin:	0;
+	padding: 0;
+}
+
+/* ヘッダーの装飾　*/
+.menu_con {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1260px;
+	margin: 0 auto;
+	align-items: center;
+	padding: 5px 0;
+	min-height: 60px;
+}
+
+.menu_items {
+	display: flex;
+	text-align: left;
+	align-items: center;
+}
+
+.menu_items a {
+	color: var(--color-black);
+	padding: 10px;
+}
+
+.menu_items a:hover {
+	background-color: var(--color-gray-1);
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.menu_items li a.header_img {
+	color: var(--color-white);
+	padding: 0;
+}
+
+.menu_items li a.header_img:hover {
+	background-color: var(--color-white);
+	padding: 0;
+	border-radius: 0;
+}
+
+.menu {
+	background: var(--color-white);
+	color: var(--color-black);
+	box-shadow: 0 2px 4px -1px rgba(57,76,96,.15);
+}
+
+
+.header-dropmenu a img {
+	margin-top: 5px;
+}
+
+.submenu {
+	border-radius: 20px;
+}
+
+ul.header-dropmenu {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+}
+ul.header-dropmenu > li {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  border: none;
+  text-align: right;
+}
+
+ul.header-dropmenu .submenu a {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+  margin:10px;
+  padding: 10px;
+}
+ul.header-dropmenu li ul {
+  visibility: hidden;
+  width: 190px;
+  list-style: none;
+  position: absolute;
+  top: 80%;
+  right: 0%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  border: 1px solid var(--color-gray-1);
+  z-index: 1;
+  box-shadow: 2px 2px 2px 2px rgba(57,76,96,.15);
+}
+ul.header-dropmenu li:hover ul {
+  visibility: visible;
+}
+
+ul.header-dropmenu li ul li {
+  background: var(--color-white);
+  padding: 0px 10px;
+  margin: 10px;
+  width: 150px;
+}
+ul.header-dropmenu > li:hover {
+  background: none;
+}
+ul.header-dropmenu li:hover ul li:hover {
+  background: var(--color-gray-1);
+  border-radius: 4px;
+}
+
+.drop_menu {
+	width: 100%;
+	padding: 20px;
+	border-radius: 4px;
+	background-color: var(--color-white);
+}
+
+
+.login_user {
+	max-width: 1260px;
+	margin: 10px auto;
+}
+
+
+/*    ボタンの装飾　　*/
+.back a {
+	padding: 10px 50px;
+	background-color: lightslategray;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	border: none;
+	margin: 0 5px;
+}
+
+.back a:hover {
+	background-color: #6F8499;
+}

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+
+.file_con {
+	max-width: 600px;
+	text-align: left;
+	margin: 0 auto
+}
+
+.file_con .topics {
+	padding: 10px 0; 
+}
+
+.file_con input, .file_con textarea {
+	border: 1px solid var(--color-gray-3);
+	background-color: var(--color-gray-1);
+	border-radius: 2px;
+}
+
+
+.attention {
+	font-size: 12px;
+}
+
+.buttonwrap {
+	display: flex;
+    justify-content: center;
+}
+
+.buttonwrap .back_before input:hover {
+	background-color: #6F8499;
+}
+
+.buttonwrap .submit input:hover {
+	opacity: 0.8;
+}
+
+.buttonwrap .back_before input {
+	padding: 10px 50px;
+	background-color: lightslategray;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	border: none;
+	margin: 0 5px;
+}
+
+.buttonwrap .submit input {
+	padding: 10px 50px;
+	color: var(--color-white);
+    background-color: #3C74B4;
+	border-radius: 5px;
+	cursor: pointer;
+	border: none;
+	margin: 0 5px;
+}
