@@ -27,11 +27,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation ('org.springframework.boot:spring-boot-starter-web') {
+             exclude module: 'spring-boot-starter-tomcat' // Tomcatの依存性を除外
+        }
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 	implementation 'org.springframework.boot:spring-boot-starter-jetty'
-	implementation 'org.eclipse.jetty.websocket:websocket-server:9.4.35.v20201120'
-	implementation 'org.eclipse.jetty.websocket:websocket-servlet:9.4.35.v20201120'
+	implementation 'org.eclipse.jetty.websocket:websocket-jetty-server:11.0.20'
+	implementation 'org.eclipse.jetty.websocket:websocket-servlet:11.0.20'
 
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 
