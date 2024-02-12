@@ -28,14 +28,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	modules {
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	/*modules {
 		module("org.springframework.boot:spring-boot-starter-tomcat") {
 			replacedBy("org.springframework.boot:spring-boot-starter-jetty", "Use jetty instead of tomcat")
 		}
-	}
+	}*/
 	implementation 'org.springframework.boot:spring-boot-starter-jetty'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
-	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation 'org.eclipse.jetty.websocket:websocket-server:9.4.53.v20231009'
+	implementation 'org.eclipse.jetty.websocket:websocket-servlet:9.4.53.v20231009'
+
 	compileOnly 'org.projectlombok:lombok'
 	/*developmentOnly 'org.springframework.boot:spring-ßboot-devtools'*/
 	//developmentOnly 'org.springframework.boot:spring-boot-devtools'
