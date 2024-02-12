@@ -28,17 +28,26 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	modules {
+		module("org.springframework.boot:spring-boot-starter-tomcat") {
+			replacedBy("org.springframework.boot:spring-boot-starter-jetty", "Use jetty instead of tomcat")
+		}
+	}
+	implementation 'org.springframework.boot:spring-boot-starter-jetty'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 	compileOnly 'org.projectlombok:lombok'
 	/*developmentOnly 'org.springframework.boot:spring-ßboot-devtools'*/
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	
+	//developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
 	runtimeOnly 'org.postgresql:postgresql'
+	//runtimeOnly 'org.eclipse.jetty:jetty-server:11.0.20'
+	//runtimeOnly 'org.eclipse.jetty:jetty-servlet:11.0.20'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	
+
     implementation group: 'commons-io', name: 'commons-io', version: '2.11.0' // Apache Commons IOの依存関係を追加
-    providedRuntime('org.springframework.boot:spring-boot-starter-jetty')
+    //providedRuntime('org.springframework.boot:spring-boot-starter-jetty')
 }
 
 tasks.named('test') {
