@@ -29,23 +29,16 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
-	/*modules {
-		module("org.springframework.boot:spring-boot-starter-tomcat") {
-			replacedBy("org.springframework.boot:spring-boot-starter-jetty", "Use jetty instead of tomcat")
-		}
-	}*/
 	implementation 'org.springframework.boot:spring-boot-starter-jetty'
+	implementation 'org.eclipse.jetty:jetty-websocket:9.4.35.v20201120'
+	implementation 'org.eclipse.jetty.websocket:websocket-server:9.4.35.v20201120'
+	implementation 'org.eclipse.jetty.websocket:websocket-servlet:9.4.35.v20201120'
+
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
-	implementation 'org.eclipse.jetty.websocket:websocket-server:9.4.53.v20231009'
-	implementation 'org.eclipse.jetty.websocket:websocket-servlet:9.4.53.v20231009'
 
 	compileOnly 'org.projectlombok:lombok'
-	/*developmentOnly 'org.springframework.boot:spring-ßboot-devtools'*/
-	//developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	runtimeOnly 'org.postgresql:postgresql'
-	//runtimeOnly 'org.eclipse.jetty:jetty-server:11.0.20'
-	//runtimeOnly 'org.eclipse.jetty:jetty-servlet:11.0.20'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
