@@ -40,15 +40,14 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     implementation group: 'commons-io', name: 'commons-io', version: '2.11.0' // Apache Commons IOの依存関係を追加
-    //providedRuntime('org.springframework.boot:spring-boot-starter-jetty')
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
 
-bootWar {
-    archiveFileName = 'portfolio.war'
+war {
+    archiveFileName = "portfolio.war"
 }
 
 
