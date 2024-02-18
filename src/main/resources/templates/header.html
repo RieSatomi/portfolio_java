@@ -17,7 +17,7 @@
 				<div class="profile"><a th:href="@{/profile}">プロフィール</a></div>
 				
             	<ul class="header-dropmenu">
-               		<li><a href="" class="header_img"><img src="/images/profile_photo.jpg" style="width: 35px; height: auto; border-radius: 50%;" alt="profile_photo"></a>
+			<li><a href="" class="header_img"><img th:src="@{/images/profile_photo.jpg}" style="width: 35px; height: auto; border-radius: 50%;" alt="profile_photo"></a>
                 		<ul class="submenu" id="menu">
                     		<li><a th:href="@{/users}">ユーザー情報</a></li>
                     		<li><a th:href="@{/logout}">ログアウト</a></li>
