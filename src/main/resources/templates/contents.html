@@ -22,10 +22,10 @@
         		<h2>[[${data.title}]]</h2>
         		<p><img th:src="'data:image/png;base64,' + ${image64_01}" alt="Image" style="width: 600px; height: auto;"></p>
         <!-- Description1:-->
-        		<p class="desc">[[${data.description}]]</p>
+        		<p class="desc" style="white-space: pre-wrap;">[[${data.description}]]</p>
         		<p><img th:src="'data:image/png;base64,' + ${image64_02}" alt="Image" style="width: 600px; height: auto;"></p>
         <!-- Description2:-->
-        		<p class="desc">[[${data.description2}]]</p>
+        		<p class="desc" style="white-space: pre-wrap;">[[${data.description2}]]</p>
         <!-- 他のデータフィールドも同様に表示 -->
    			</div>
     		<div th:if="${data} == null">
